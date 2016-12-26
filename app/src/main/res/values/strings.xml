@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Attendance System</string>
+    <string-array name="table_menu">
+        <item>Preview</item>
+        <item>Delete</item>
+        <item>Rename</item>
+        <item>Export</item>
+    </string-array>
+    <string-array name="sp_sc_m" >
+    <item>Single</item>
+    <item>Multi</item>
+    </string-array>
+    <string-array name="list_long">
+        <item>Speak</item>
+        <item>Delete</item>
+    </string-array>
+</resources>

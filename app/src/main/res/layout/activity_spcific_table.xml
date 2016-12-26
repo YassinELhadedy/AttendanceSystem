@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabHost">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/list"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/top_tog"
+                            android:orientation="horizontal"
+                            android:background="#3446ac"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:textSize="16dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Multi-Scan"/>
+
+                            <ToggleButton
+                                android:id="@+id/tbu_s_m"
+                                android:layout_centerVertical="true"
+                                android:textColor="#fff000"
+                                android:background="@android:color/transparent"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                android:paddingLeft="90dp"
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/top_pro"
+                            android:layout_below="@+id/top_tog"
+                            android:background="#3446ac"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="@dimen/activity_horizontal_margin"
+                            android:paddingRight="@dimen/activity_horizontal_margin">
+
+                            <Button
+                                android:id="@+id/bu_stop"
+                                android:layout_below="@id/line"
+                                android:text="STOP"
+                                android:textColor="#ffffff"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                style="?android:attr/buttonStyleSmall"
+                                android:background="@drawable/c_bu" />
+
+                            <Button
+                                android:onClick="oCSave"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@id/line"
+                                android:id="@+id/bu_save"
+                                android:text="SAVE"
+                                android:textColor="#ffffff"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/buttonStyleSmall"
+                                android:background="@drawable/c_bu" />
+
+                            <Button
+                                android:onClick="oCClear"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@id/line"
+                                android:text="CLEAR"
+                                android:textColor="#ffffff"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                style="?android:attr/buttonStyleSmall"
+                                android:background="@drawable/c_bu"
+                                android:id="@+id/button" />
+
+                        </RelativeLayout>
+
+                        <ListView
+                            android:id="@+id/lv_list"
+                            android:layout_below="@+id/top_pro"
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+
+                        <Button
+                            android:id="@+id/bu_scan"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:layout_marginBottom="@dimen/activity_vertical_margin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/scan"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/group"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/fragment_space_preview_table"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
